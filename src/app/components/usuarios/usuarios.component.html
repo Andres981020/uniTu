@@ -1,24 +1,35 @@
+<app-navbar></app-navbar>
 <table class="table">
-    <thead>
-      <tr>
-        <th scope="col">Id - Usuario</th>
-        <th scope="col">Nombres</th>
-        <th scope="col">Apellidos</th>
-        <th scope="col">Correo</th>
-        <th scope="col">Celular</th>
-        <th scope="col">Password</th>
-        <th scope="col">Rol</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr *ngFor="let u of usuarios">
-        <th>{{ u.id }}</th>
-        <td>{{ u.primer_nombre }} {{ u.segundo_nombre }}</td>
-        <td>{{ u.primer_apellido }}  {{u.segundo_apellido }}</td>
-        <th>{{ u.correo_electronico }}</th>
-        <th>{{ u.celular }}</th>
-        <th>{{ u.password }}</th>
-        <th>{{ u.rol.nombre_rol }}</th>
-      </tr>
-    </tbody>
-  </table>
+  <thead>
+    <tr>
+      <th scope="col">Id - Usuario</th>
+      <th scope="col">Nombres</th>
+      <th scope="col">Apellidos</th>
+      <th scope="col">Correo</th>
+      <th scope="col">Celular</th>
+      <th scope="col">Password</th>
+      <th scope="col">Rol</th>
+      <th scope="col">Actualizar - Eliminar</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let u of usuarios">
+      <th>{{ u.id }}</th>
+      <td>{{ u.primer_nombre }} {{ u.segundo_nombre }}</td>
+      <td>{{ u.primer_apellido }} {{u.segundo_apellido }}</td>
+      <th>{{ u.correo_electronico }}</th>
+      <th>{{ u.celular }}</th>
+      <th>{{ u.password }}</th>
+      <th>{{ u.rol.nombre_rol }}</th>
+      <th>
+        <button class="btn btn-outline-secondary ms-3">
+          <i class="fa fa-pen"></i>
+        </button>
+
+        <button class="btn btn-outline-danger ms-5">
+          <i class="fa fa-trash"></i>
+        </button>
+      </th>
+    </tr>
+  </tbody>
+</table>

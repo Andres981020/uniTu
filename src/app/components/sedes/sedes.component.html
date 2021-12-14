@@ -2,17 +2,17 @@
 <table class="table">
     <thead>
       <tr>
-        <th scope="col">Id - Rol</th>
-        <th scope="col">Nombre Rol</th>
-        <th scope="col">Tipo Rol</th>
+        <th scope="col">Nombre sede</th>
+        <th scope="col">Latitud</th>
+        <th scope="col">Longitud</th>
         <th scope="col">Actualizar - Eliminar</th>
       </tr>
     </thead>
     <tbody>
-      <tr *ngFor="let rol of roles">
-        <th> {{ rol.id }} </th>
-        <td> {{ rol.nombre_rol }} </td>
-        <td> {{ rol.tipo_rol }} </td>
+      <tr *ngFor="let sede of sedes">
+        <th> {{ sede.nombre_sede }} </th>
+        <td> {{ sede.latitud }} </td>
+        <td> {{ sede.longitud }} </td>
         <td> 
           <button class="btn btn-outline-secondary ms-3">
             <i class="fa fa-pen"></i>
@@ -26,3 +26,4 @@
       </tr>
     </tbody>
   </table>
+

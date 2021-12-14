@@ -2,17 +2,19 @@
 <table class="table">
     <thead>
       <tr>
-        <th scope="col">Id - Rol</th>
-        <th scope="col">Nombre Rol</th>
-        <th scope="col">Tipo Rol</th>
+        <th scope="col">Semestre grupo</th>
+        <th scope="col">Estado grupo</th>
+        <th scope="col">Cupo grupo</th>
+        <th scope="col">Número de estudiantes</th>
         <th scope="col">Actualizar - Eliminar</th>
       </tr>
     </thead>
     <tbody>
-      <tr *ngFor="let rol of roles">
-        <th> {{ rol.id }} </th>
-        <td> {{ rol.nombre_rol }} </td>
-        <td> {{ rol.tipo_rol }} </td>
+      <tr *ngFor="let g of grupos">
+        <th> {{ g.semestre }} </th>
+        <td> {{ g.estado }} </td>
+        <td> {{ g.cupo_estudiantes }} </td>
+        <td> {{ g.numero_estudiantes }} </td>
         <td> 
           <button class="btn btn-outline-secondary ms-3">
             <i class="fa fa-pen"></i>
@@ -26,3 +28,4 @@
       </tr>
     </tbody>
   </table>
+
