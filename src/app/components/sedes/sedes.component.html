@@ -1,5 +1,6 @@
-<app-navbar></app-navbar>
-<table class="table">
+<div *ngIf="pasarPag == false">
+  <app-navbar></app-navbar>
+  <table class="table">
     <thead>
       <tr>
         <th scope="col">Nombre sede</th>
@@ -13,12 +14,12 @@
         <th> {{ sede.nombre_sede }} </th>
         <td> {{ sede.latitud }} </td>
         <td> {{ sede.longitud }} </td>
-        <td> 
+        <td>
           <button class="btn btn-outline-secondary ms-3">
             <i class="fa fa-pen"></i>
-          </button> 
+          </button>
 
-          <button class="btn btn-outline-danger ms-5">
+          <button (click)="eliminar(sede.id)" class="btn btn-outline-danger ms-5">
             <i class="fa fa-trash"></i>
           </button>
 
@@ -27,3 +28,43 @@
     </tbody>
   </table>
 
+  <div>
+    <label class="ms-8">Agregar sede</label>
+    <button (click)="pasar()" class="btn btn-outline-primary ms-3">
+      <i class="fa fa-user-plus"></i>
+    </button>
+  </div>
+</div>
+
+<div class="container mt-5" *ngIf="pasarPag == true">
+
+  <h3>Formulario de creaciónd de sedes</h3>
+
+  <form class="row g-3">
+    <div class="col-12">
+      <label for="inputAddress" class="form-label">Nombre de la sede</label>
+      <input type="text" class="form-control" id="inputAddress" placeholder="Ingrese el nombre de la sede">
+    </div>
+    <div class="col-md-6">
+      <label for="inputEmail4" class="form-label">Latitud</label>
+      <input type="text" class="form-control" id="latitud" placeholder="Ingrese la latitud de la sede">
+    </div>
+    <div class="col-md-6">
+      <label class="form-label">Longitud</label>
+      <input type="text" class="form-control" id="longitud" placeholder="Ingrese la longitud de la sede">
+    </div>
+
+    <div class="col-md-4">
+      <label for="inputState" class="form-label">State</label>
+      <select id="estado" class="form-select">
+        <option value="0">Inactiva</option>
+        <option value="1">Activa</option>
+      </select>
+    </div>
+    <div class="col-12">
+      <button 
+        (click)="datos()"
+        class="btn btn-outline-primary">Ingresar</button>
+    </div>
+  </form>
+</div>

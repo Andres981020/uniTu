@@ -11,4 +11,8 @@ export class GruposService {
   listar(){
     return this.http.get('http://localhost:8085/grupos');
   }
+
+  eliminar(id:any){
+    return this.http.delete('http://localhost:8085/grupos/eliminar-grupo/'+id)
+  }
 }

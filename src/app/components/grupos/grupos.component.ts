@@ -25,4 +25,11 @@ export class GruposComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  eliminar(id:any){
+    this.service.eliminar(id).subscribe(data=>{
+      console.log(data);
+      
+    })
+  }
+
 }

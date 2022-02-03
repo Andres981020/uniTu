@@ -21,9 +21,14 @@ export class RolesComponent implements OnInit {
       console.log(this.roles); 
     
     })
-
   }
   ngOnInit(): void {
+  }
+
+  eliminar(id:any){
+    this.rolService.eliminar(id).subscribe(bool =>{
+      console.log(bool);
+    })
   }
 
 }

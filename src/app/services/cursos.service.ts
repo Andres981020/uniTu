@@ -11,4 +11,8 @@ export class CursosService {
   listar(){
     return this.http.get('http://localhost:8083/cursos');
   }
+
+  eliminar(id:any){
+    return this.http.delete('http://localhost:8083/cursos/eliminar-curso/'+id)
+  }
 }

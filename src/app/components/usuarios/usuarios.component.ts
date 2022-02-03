@@ -24,4 +24,10 @@ export class UsuariosComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  eliminar(id:any){
+    this.usuarioService.eliminar(id).subscribe(bool=>{
+      console.log(bool);  
+    })
+  }
+
 }

@@ -1,6 +1,5 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { RolModel } from '../models/rol.model';
 
 @Injectable({
   providedIn: 'root'
@@ -12,6 +11,10 @@ export class RolServiceService {
 
   listar(){
     return this.http.get('http://localhost:8081/roles');
+  }
+
+  eliminar(id:any){
+    return this.http.delete('http://localhost:8081/roles/eliminar-rol/'+id)
   }
 
 }

@@ -12,4 +12,9 @@ export class UsuarioServiceService {
   listar(){
     return this.http.get('http://localhost:8080/usuarios');
   }
+
+  eliminar(id:any){
+    return this.http.delete('http://localhost:8080/usuarios/eliminar-usuario/'+id)
+  }
 }
+ 
